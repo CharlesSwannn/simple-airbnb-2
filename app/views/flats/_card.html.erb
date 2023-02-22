@@ -1,0 +1,12 @@
+<div class="card-container" style="display:flex; justify-content:space-around; margin-top: 3vh;">
+  <% @flats.each do |flat| %>
+    <div class="card" style="width: 18rem;">
+      <img src="https://img.a.transfermarkt.technology/portrait/big/781-1663951943.jpg?lm=1" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= flat.name %></h5>
+        <p class="card-text"><%= flat.description %></p>
+        <a href="<%= flat_path(flat) %>" class="btn btn-primary">See more</a>
+      </div>
+    </div>
+  <% end %>
+</div>
