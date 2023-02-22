@@ -1,4 +1,26 @@
 <div class="container">
-  <h1>Here's our flat</h1>
-  <%= @flat.name %>
+  <div class="inside-container" style="display:flex;">
+    <div class="left-container" style="width:65%;">
+      <div class="long-card" style="background-color:#F8F9FA; padding: 20px; margin-bottom: 20px; box-shadow: 1px 1px 2px rgb(0 0 0 / 10%); border-radius: 3px;">
+        <h1><%= @flat.name %></h1>
+        <p><%= @flat.address %></p>
+      </div>
+      <div class="long-card" style="background-color:#F8F9FA; padding: 20px; margin-bottom: 20px; box-shadow: 1px 1px 2px rgb(0 0 0 / 10%); border-radius: 3px;">
+        <h2>A bit more about this flat...</h2>
+        <p><%= @flat.description %></p>
+      </div>
+      <div class="long-card" style="background-color:#F8F9FA; padding: 20px; margin-bottom: 20px; box-shadow: 1px 1px 2px rgb(0 0 0 / 10%); border-radius: 3px;">
+        <h2>A bit more about this flat...</h2>
+        <div class="details-container" style="display:flex;">
+          <%= @flat.price_per_night %>€
+          <%= @flat.number_of_guests %>🕺
+        </div>
+      </div>
+    </div>
+    <div class="right-container">
+    </div>
+  </div>
+  <hr>
+  <%= link_to  "edit", edit_flat_path %>
+  <%= link_to  "delete", flat_path(@flat), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
 </div>

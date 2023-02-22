@@ -68,4 +68,4 @@ group :test do
   gem "webdrivers"
 end
 
-gem "simple_form", github: "heartcombo/simple_form"
+gem "simple_form"
